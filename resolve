@@ -1,0 +1,12 @@
+// Every time I run anonsurf from the terminal or the gui my resolv.conf gets overridden. None of these previous answers worked for me. 
+//The solution I found is this.
+
+
+sudo rm /etc/resolv.conf
+sudo nano /etc/resolv.conf
+nameserver 1.1.1.1
+ctrl-o ctrl-x
+
+//if not working then again try this:
+
+sudo dnstool address 8.8.8.8
